@@ -1,0 +1,49 @@
+<% layout('/layout/boilerplate.ejs') -%>
+<br>
+<button class="btn btn-dark back-btn"><a href="/listings" style="text-decoration: none; color: white;">Back</a></button>
+<br><br>
+<h2>Create New Listing: </h2>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-1">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" name="listing[title]" placeholder="Add a catchy title" class="form-control" required>
+                <div class="invalid-feedback">Fill title!</div>
+            </div>
+            <br><br>
+            <div class="mb-1">
+                <label for="description" class="form-label">Description:</label>
+                <textarea name="listing[description]" class="form-control" required></textarea>
+                <div class="invalid-feedback">Fill description!</div>
+            </div>
+            <br><br>
+            <div class="mb-1">
+                <label for="image" class="form-label">Upload Listing Image:</label>
+                <input type="file" name="listing[image]" class="form-control">
+            </div>
+            <br><br>
+            <div class="row" class="mb-1">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Price:</label>
+                    <input name="listing[price]" placeholder="1200" class="form-control" required>
+                    <div class="invalid-feedback">Fill price!</div>
+                </div>
+                <div class="col-md-8">
+                    <label for="country" class="form-label">Country:</label>
+                    <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                    <div class="invalid-feedback">Fill country!</div>
+                </div>
+            </div>
+            <br><br>
+            <div class="mb-1">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" name="listing[location]" placeholder="Gorakhpur, Uttar Pradesh" class="form-control" required>
+                <div class="invalid-feedback">Fill location!</div>
+            </div>
+            <br><br>
+            <button class="btn btn-dark create-btn">Create</button>
+        </form>
+    </div>
+</div>
+<br><br><br>
