@@ -56,6 +56,14 @@ app.get('/', (req, res) => {
   res.render('listing/home.ejs');
 });
 
+app.get('/privacy', (req, res) => {
+  res.render('listing/privacyPolicy.ejs');
+});
+
+app.get('/terms', (req, res) => {
+  res.render('listing/termsOfUse.ejs');
+});
+
 app.use(session(sessionOption));
 app.use(flash());
 
